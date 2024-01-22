@@ -22,10 +22,14 @@ spec:
     spec:
       containers:
       - name: detect-reused-refresh-token-app
+<<<<<<< HEAD
         image: conano/detect-reused-refresh-token-handler:latest        
         envFrom:
         - secretRef:
             name: detect-reused-refresh-token-secret
+=======
+        image: conano/detect-reused-refresh-token-handler:0.0.1-4
+>>>>>>> 9dbbe92dc731c8a4d1ad2469551a7951f5ee2db6
         imagePullPolicy: IfNotPresent        
         resources:
           requests:
@@ -34,11 +38,3 @@ spec:
           limits:
             memory: "256Mi"
             cpu: "500m"
-        volumeMounts:
-        - name: secret-volume
-          mountPath: /secrets/        
-      volumes:
-      - name: secret-volume
-        secret:
-          secretName: detect-reused-refresh-token-secret
-      
