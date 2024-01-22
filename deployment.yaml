@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: detect-reused-refresh-token-app
-        image: conano/detect-reused-refresh-token-handler:latest        
+        image: conano/detect-reused-refresh-token-handler:0.0.1-4
         imagePullPolicy: IfNotPresent        
         resources:
           requests:
