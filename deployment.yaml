@@ -23,6 +23,9 @@ spec:
       containers:
       - name: detect-reused-refresh-token-app
         image: conano/detect-reused-refresh-token-handler:latest        
+        envFrom:
+        - secretRef:
+            name: detect-reused-refresh-token-secret
         imagePullPolicy: IfNotPresent        
         resources:
           requests:
